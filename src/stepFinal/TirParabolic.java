@@ -60,8 +60,8 @@ public class TirParabolic extends PApplet {
 
             // Comprovam si el projectil col·lisiona amb els objectius
             for(int i=0; i<targets.length; i++){
-                if(!targets[i].exploded && targets[i].isExploded(this, p)){
-                    targets[i].exploded = true;
+                if(targets[i].estat != Target.ESTAT.EXPLOTAT && targets[i].isExploded(this, p)){
+                    targets[i].setEstat(Target.ESTAT.EXPLOTAT);
                     numPoints++;
                 }
             }
@@ -71,8 +71,8 @@ public class TirParabolic extends PApplet {
 
             // Posam la resta d'objectius a fallats (failed)
             for(int i=0; i<targets.length; i++){
-                if(!targets[i].failed && !targets[i].exploded){
-                    targets[i].failed = true;
+                if(targets[i].estat == Target.ESTAT.PENDENT){
+                    targets[i].setEstat(Target.ESTAT.FALLAT);
                 }
             }
             // Misatge per resetear la posició dels nous objectius
