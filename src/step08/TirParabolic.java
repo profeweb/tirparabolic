@@ -1,6 +1,7 @@
 package step08;
 
 import processing.core.PApplet;
+import processing.core.PFont;
 import processing.sound.SoundFile;
 
 public class TirParabolic extends PApplet {
@@ -27,7 +28,11 @@ public class TirParabolic extends PApplet {
     // Estadístiques del joc
     int numShots = 0, numPoints = 0, numTargets = 0;
 
+    // Sons d'explosió i d'impacte
     SoundFile soCano, soImpacte;
+
+    // Fonts del texte
+    PFont font1, font2;
 
     public static void main(String[] args) {
         PApplet.main("step08.TirParabolic");
@@ -45,8 +50,13 @@ public class TirParabolic extends PApplet {
         // Crea els targets
         setTargets(3, 9);
 
+        // Carrega els sons
         soCano = new SoundFile(this, "explosio.wav");
         soImpacte = new SoundFile(this, "impacte.wav");
+
+        // Carrega les fonts
+        font1 = createFont("EvilEmpire.otf", 34);
+        font2 = createFont("Sono.ttf", 14);
 
     }
 
@@ -109,12 +119,16 @@ public class TirParabolic extends PApplet {
 
         // Títol del joc
         fill(0); textAlign(LEFT); textSize(34);
+        textFont(font1);
         text("Tir Parabòlic", 50, 50);
 
         // Marcador
         fill(0); textAlign(RIGHT);
         text("Score", width - 50, 50);
+
+        // Estadístiques
         textSize(14);
+        textFont(font2);
         String percentatge = nf(100*(numPoints/(float)numTargets), 2, 2);
         text("Rate: "+ percentatge+"%", width - 50, 80);
         text("Hits: "+ numPoints + " / " + numTargets, width - 50, 100);
@@ -122,6 +136,7 @@ public class TirParabolic extends PApplet {
 
         // Instruccions
         fill(0); textSize(14); textAlign(LEFT);
+        textFont(font2);
         text("Press S key to shot your cannon.", 50, height-90);
         text("Use MOUSE to set your cannon direction.", 50, height-70);
         text("Press ARROW KEYS to set up your cannon.", 50, height-50);

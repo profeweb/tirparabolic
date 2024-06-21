@@ -25,6 +25,7 @@ public class Projectil {
     // Radi del projectil
     float r=10;
 
+    // Imatge del canó
     PImage imgCano;
 
     Projectil(float x, float h, float f){
