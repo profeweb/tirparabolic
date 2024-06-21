@@ -1,9 +1,12 @@
 package step08;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 import static processing.core.PApplet.cos;
 import static processing.core.PApplet.sin;
+import static processing.core.PConstants.PI;
+import static processing.core.PConstants.TWO_PI;
 
 public class Projectil {
 
@@ -21,6 +24,8 @@ public class Projectil {
 
     // Radi del projectil
     float r=10;
+
+    PImage imgCano;
 
     Projectil(float x, float h, float f){
 
@@ -40,6 +45,10 @@ public class Projectil {
         this.v0x = + f * cos(this.a);
         this.v0y = - f * sin(this.a);
         this.vy = this.v0y;
+    }
+
+    void setImatgeCano(PApplet p5){
+        this.imgCano = p5.loadImage("cannon.png");
     }
 
     // Setter de les propietats
@@ -67,17 +76,22 @@ public class Projectil {
 
         p5.pushStyle();
 
-        // Tub del canó
-        p5.strokeWeight(10); p5.stroke(0);
-        p5.line(this.x0, this.y0, dx, dy);
-
-        // Cos del canó
-        p5.stroke(0); p5.fill(0);
-        p5.rect(this.x0 - 20, this.y0, 40, 20);
-
         // Projectil
         p5.noStroke(); p5.fill(255, 0, 0);
         p5.circle(this.x, this.y, 2*this.r);
+
+        // Tub del canó
+        p5.strokeWeight(15); p5.stroke(255, 0, 0);
+        p5.line(this.x0, this.y0, dx, dy);
+
+        // Cos del canó
+        p5.imageMode(p5.CENTER);
+        p5.pushMatrix();
+        p5.translate(this.x0, this.y0);
+        p5.scale(0.15f, 0.15f);
+        p5.rotate( -this.a);
+        p5.image(this.imgCano, 0, 210);
+        p5.popMatrix();
 
         // Paràmetres del projectil (Posició, Velocitat i Força)
         p5.fill(0); p5.textSize(14); p5.textAlign(p5.LEFT);

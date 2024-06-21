@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a16953a-730e-4506-b3ba-b5455e8dff29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/step07/Projectil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/step07/Target.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/step07/TirParabolic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/step08/Projectil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/step08/Target.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/step08/TirParabolic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/library1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cannon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/explosio.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/impacte.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/step01/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step01/TirParabolic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/step02/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step02/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/step03/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step03/Projectil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/step06/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step06/Projectil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/step06/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step06/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/step06/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step06/TirParabolic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stepFinal/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stepFinal/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stepFinal/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stepFinal/TirParabolic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TirParabolic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TirParabolic.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step08/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step08/Projectil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step08/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step08/TirParabolic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tonim/Documents/CODE/TirParabolic/src/step08",
+    "last_opened_file_path": "C:/Users/tonim/Documents/Processing/libraries/sound/library",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -153,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718956447015</updated>
       <workItem from="1718956448987" duration="7251000" />
-      <workItem from="1718978821665" duration="6211000" />
+      <workItem from="1718978821665" duration="8651000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1718958332333</created>
@@ -183,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718969541746</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial">
+      <created>1718985862850</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718985862850</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

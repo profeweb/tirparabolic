@@ -1,6 +1,7 @@
 package step08;
 
 import processing.core.PApplet;
+import processing.sound.SoundFile;
 
 public class TirParabolic extends PApplet {
 
@@ -26,6 +27,8 @@ public class TirParabolic extends PApplet {
     // Estadístiques del joc
     int numShots = 0, numPoints = 0, numTargets = 0;
 
+    SoundFile soCano, soImpacte;
+
     public static void main(String[] args) {
         PApplet.main("step08.TirParabolic");
     }
@@ -37,9 +40,13 @@ public class TirParabolic extends PApplet {
     public void setup(){
         // Crea el projectil amb el constructor
         p = new Projectil(100, h, 50);
+        p.setImatgeCano(this);
 
         // Crea els targets
         setTargets(3, 9);
+
+        soCano = new SoundFile(this, "explosio.wav");
+        soImpacte = new SoundFile(this, "impacte.wav");
 
     }
 
@@ -76,6 +83,7 @@ public class TirParabolic extends PApplet {
                 if(targets[i].estat != Target.ESTAT.EXPLOTAT && targets[i].esImpactatPer(this, p)){
                     targets[i].setEstat(Target.ESTAT.EXPLOTAT);
                     numPoints++;
+                    soImpacte.play();
                 }
             }
         }
@@ -112,7 +120,6 @@ public class TirParabolic extends PApplet {
         text("Hits: "+ numPoints + " / " + numTargets, width - 50, 100);
         text("Shots: "+ numShots, width - 50, 120);
 
-
         // Instruccions
         fill(0); textSize(14); textAlign(LEFT);
         text("Press S key to shot your cannon.", 50, height-90);
@@ -146,6 +153,7 @@ public class TirParabolic extends PApplet {
         if (key == 's' || key=='S') {
             if(!disparat){
                 numShots++;
+                soCano.play();
             }
             disparat = true;
         }
@@ -153,6 +161,7 @@ public class TirParabolic extends PApplet {
         else if (key == 'r') {
             disparat = false;
             t = 0;
+            p.update(t, g);
             setTargets(3, 12);
         }
         // Augmenta la força del dispar
