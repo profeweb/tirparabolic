@@ -69,7 +69,7 @@
       <recent name="step01" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.step05.TirParabolic">
+  <component name="RunManager" selected="Application.step04.TirParabolic">
     <configuration name="TirParabolic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stepFinal.TirParabolic" />
       <module name="TirParabolic" />
@@ -137,8 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.step05.TirParabolic" />
         <item itemvalue="Application.step04.TirParabolic" />
+        <item itemvalue="Application.step05.TirParabolic" />
         <item itemvalue="Application.step03.TirParabolic" />
         <item itemvalue="Application.step02.TirParabolic" />
         <item itemvalue="Application.TirParabolic" />

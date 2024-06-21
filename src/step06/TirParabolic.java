@@ -14,8 +14,17 @@ public class TirParabolic extends PApplet {
     float f = 100;
     float h = 400;
 
+    // Dispar del projectil fet o no
+    boolean disparat = false;
+
+    // Temps
+    float t =0;
+
+    // Gravetat
+    float g = 9.8f;
+
     public static void main(String[] args) {
-        PApplet.main("step04.TirParabolic");
+        PApplet.main("step06.TirParabolic");
     }
 
     public void settings(){
@@ -41,14 +50,22 @@ public class TirParabolic extends PApplet {
     public void draw(){
         background(220);
 
-        // Actualitza el canó
-        float a = map(mouseY, this.h-100, this.h+100, 0, -PI);
-        p.setProperties(a, mouseX, mouseY, f, h);
-
         // Dibuixa els targets
         t1.display(this);
         t2.display(this);
         t3.display(this);
+
+        // Si no s'ha disparat, configura posició H, força F i direcció A del canó
+        if (!disparat) {
+            float a = map(mouseY, this.h-100, this.h+100, 0, -PI);
+            p.setProperties(a, mouseX, mouseY, f, h);
+        }
+        else {
+            // Actualitzam la posició del projectil
+            p.update(t, g);
+            // Actualitzam el temps
+            t += 0.1;
+        }
 
         // Dibuixa el projectil
         p.display(this);
@@ -56,8 +73,12 @@ public class TirParabolic extends PApplet {
 
     public void keyPressed() {
 
+        // Dispara el canó
+        if (key == 's' || key=='S') {
+            disparat = true;
+        }
         // Augmenta la força del dispar
-        if (keyCode == RIGHT) {
+        else if (keyCode == RIGHT) {
             f += 10;
             f = constrain(f, 10, 300);
         }

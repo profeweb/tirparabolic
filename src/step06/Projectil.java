@@ -85,4 +85,12 @@ public class Projectil {
         p5.popStyle();
 
     }
+
+    void update(float t, float g){
+
+        this.x = this.x0 + this.v0x * t;
+        this.y = this.y0 + this.vy*t - 0.5f*g*t*t;
+
+        this.vy = this.v0y + g*t;
+    }
 }
