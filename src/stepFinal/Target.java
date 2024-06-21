@@ -4,6 +4,7 @@ import processing.core.PApplet;
 
 public class Target {
 
+    // Posició (x,y) i radi
     float x, y, r;
 
     enum ESTAT {PENDENT, EXPLOTAT, FALLAT};
@@ -37,6 +38,10 @@ public class Target {
         p5.popStyle();
     }
 
+    boolean esImpactatPer(PApplet p5, Projectil p){
+        return (p5.dist(this.x, this.y, p.x, p.y) < p5.max(p.r,this.r));
+    }
+
     void update(PApplet p5){
         if(this.estat == ESTAT.EXPLOTAT && this.y < p5.height + 2*this.r){
             this.y += 5;
@@ -46,7 +51,4 @@ public class Target {
         }
     }
 
-    boolean esImpactatPer(PApplet p5, Projectil p){
-        return (p5.dist(this.x, this.y, p.x, p.y) < p5.max(p.r,this.r));
-    }
 }
