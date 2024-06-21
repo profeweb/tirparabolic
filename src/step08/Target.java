@@ -1,4 +1,4 @@
-package step06;
+package step08;
 
 import processing.core.PApplet;
 
@@ -38,9 +38,17 @@ public class Target {
         p5.popStyle();
     }
 
-    // Comprova si el projectil p impacta en el target
     boolean esImpactatPer(PApplet p5, Projectil p){
         return (p5.dist(this.x, this.y, p.x, p.y) < p5.max(p.r,this.r));
+    }
+
+    void update(PApplet p5){
+        if(this.estat == Target.ESTAT.EXPLOTAT && this.y < p5.height + 2*this.r){
+            this.y += 5;
+        }
+        else if(this.estat == Target.ESTAT.FALLAT && this.y > -2*this.r){
+            this.y -= 5;
+        }
     }
 
 }

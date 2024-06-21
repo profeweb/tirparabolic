@@ -1,4 +1,4 @@
-package step03;
+package step07;
 
 import processing.core.PApplet;
 
@@ -18,6 +18,9 @@ public class Projectil {
 
     // Vector velocitat inicial
     float v0x, v0y, vy;
+
+    // Radi del projectil
+    float r=10;
 
     Projectil(float x, float h, float f){
 
@@ -39,6 +42,23 @@ public class Projectil {
         this.vy = this.v0y;
     }
 
+    // Setter de les propietats
+    void setProperties(float a, float mx, float my, float f, float h){
+
+        // Posició y inicial (canó i projectil)
+        this.y = h;
+        this.y0 = h;
+
+        // Angle i força del dispar
+        this.a = a;
+        this.f = f;
+
+        // Velocitats X,Y del dispar
+        this.v0x = + this.f * cos(this.a);
+        this.v0y = - this.f * sin(this.a);
+        this.vy = this.v0y;
+    }
+
     //Dibuixa el canó i el projectil
     void display(PApplet p5){
 
@@ -57,7 +77,7 @@ public class Projectil {
 
         // Projectil
         p5.noStroke(); p5.fill(255, 0, 0);
-        p5.circle(this.x, this.y, 10);
+        p5.circle(this.x, this.y, 2*this.r);
 
         // Paràmetres del projectil (Posició, Velocitat i Força)
         p5.fill(0); p5.textSize(14); p5.textAlign(p5.LEFT);
@@ -67,5 +87,13 @@ public class Projectil {
 
         p5.popStyle();
 
+    }
+
+    void update(float t, float g){
+
+        this.x = this.x0 + this.v0x * t;
+        this.y = this.y0 + this.vy*t - 0.5f*g*t*t;
+
+        this.vy = this.v0y + g*t;
     }
 }

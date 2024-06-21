@@ -19,6 +19,9 @@ public class Projectil {
     // Vector velocitat inicial
     float v0x, v0y, vy;
 
+    // Radi del projectil
+    float r=10;
+
     Projectil(float x, float h, float f){
 
         // Posició del canó
@@ -74,7 +77,7 @@ public class Projectil {
 
         // Projectil
         p5.noStroke(); p5.fill(255, 0, 0);
-        p5.circle(this.x, this.y, 10);
+        p5.circle(this.x, this.y, 2*this.r);
 
         // Paràmetres del projectil (Posició, Velocitat i Força)
         p5.fill(0); p5.textSize(14); p5.textAlign(p5.LEFT);

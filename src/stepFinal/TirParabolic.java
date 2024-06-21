@@ -60,7 +60,7 @@ public class TirParabolic extends PApplet {
 
             // Comprovam si el projectil col·lisiona amb els objectius
             for(int i=0; i<targets.length; i++){
-                if(targets[i].estat != Target.ESTAT.EXPLOTAT && targets[i].isExploded(this, p)){
+                if(targets[i].estat != Target.ESTAT.EXPLOTAT && targets[i].esImpactatPer(this, p)){
                     targets[i].setEstat(Target.ESTAT.EXPLOTAT);
                     numPoints++;
                 }
@@ -109,7 +109,8 @@ public class TirParabolic extends PApplet {
         fill(0); textAlign(RIGHT);
         text("Score", width - 50, 50);
         textSize(14);
-        text("Rate: "+ nf(100* (numPoints/numTargets), 2, 2)+"%", width - 50, 80);
+        String percentatge = nf(100*(numPoints/(float)numTargets), 2, 2);
+        text("Rate: "+ percentatge+"%", width - 50, 80);
         text("Hits: "+ numPoints + " / " + numTargets, width - 50, 100);
         text("Shots: "+ numShots, width - 50, 120);
 

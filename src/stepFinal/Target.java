@@ -46,7 +46,7 @@ public class Target {
         }
     }
 
-    boolean isExploded(PApplet p5, Projectil p){
+    boolean esImpactatPer(PApplet p5, Projectil p){
         return (p5.dist(this.x, this.y, p.x, p.y) < p5.max(p.r,this.r));
     }
 }

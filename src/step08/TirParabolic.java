@@ -1,4 +1,4 @@
-package step06;
+package step08;
 
 import processing.core.PApplet;
 
@@ -23,8 +23,11 @@ public class TirParabolic extends PApplet {
     // Gravetat
     float g = 9.8f;
 
+    // Estadístiques del joc
+    int numShots = 0, numPoints = 0, numTargets = 0;
+
     public static void main(String[] args) {
-        PApplet.main("step06.TirParabolic");
+        PApplet.main("step08.TirParabolic");
     }
 
     public void settings(){
@@ -43,17 +46,26 @@ public class TirParabolic extends PApplet {
     public void draw(){
         background(220);
 
-        // Dibuixa els targets
-        for(int i=0; i<targets.length; i++) {
+        // Dibuixa i actualitza la posició dels targets
+        for(int i=0; i<targets.length; i++){
             targets[i].display(this);
+            targets[i].update(this);
         }
+
+        // Dibuixa el projectil
+        p.display(this);
+
+        // Dibuixa les estadístiques del joc
+        displayInfo();
 
         // Si no s'ha disparat, configura posició H, força F i direcció A del canó
         if (!disparat) {
             float a = map(mouseY, this.h-100, this.h+100, 0, -PI);
             p.setProperties(a, mouseX, mouseY, f, h);
         }
-        else {
+        // Si s'ha disparat i el projectil està dins del camp de joc (pantalla)
+        else if (disparat && p.x <= width && p.y <= height) {
+
             // Actualitzam la posició del projectil
             p.update(t, g);
             // Actualitzam el temps
@@ -63,19 +75,61 @@ public class TirParabolic extends PApplet {
             for(int i=0; i<targets.length; i++){
                 if(targets[i].estat != Target.ESTAT.EXPLOTAT && targets[i].esImpactatPer(this, p)){
                     targets[i].setEstat(Target.ESTAT.EXPLOTAT);
+                    numPoints++;
                 }
             }
         }
+        // Si s'ha disparat i el projectil ha sortir del camp de joc (pantalla)
+        else if (disparat && (p.x > width || p.y > height)) {
 
-        // Dibuixa el projectil
-        p.display(this);
+            // Posam la resta d'objectius a fallats (failed)
+            for(int i=0; i<targets.length; i++){
+                if(targets[i].estat == Target.ESTAT.PENDENT){
+                    targets[i].setEstat(Target.ESTAT.FALLAT);
+                }
+            }
+            // Misatge per resetear la posició dels nous objectius
+            textAlign(CENTER); textSize(36); fill(255, 0, 0);
+            text("Press R key to set up the next scenario", width/2, height/2);
+        }
+
+
     }
 
+    // Mostra estadístiques i instruccions
+    void displayInfo(){
+
+        // Títol del joc
+        fill(0); textAlign(LEFT); textSize(34);
+        text("Tir Parabòlic", 50, 50);
+
+        // Marcador
+        fill(0); textAlign(RIGHT);
+        text("Score", width - 50, 50);
+        textSize(14);
+        String percentatge = nf(100*(numPoints/(float)numTargets), 2, 2);
+        text("Rate: "+ percentatge+"%", width - 50, 80);
+        text("Hits: "+ numPoints + " / " + numTargets, width - 50, 100);
+        text("Shots: "+ numShots, width - 50, 120);
+
+
+        // Instruccions
+        fill(0); textSize(14); textAlign(LEFT);
+        text("Press S key to shot your cannon.", 50, height-90);
+        text("Use MOUSE to set your cannon direction.", 50, height-70);
+        text("Press ARROW KEYS to set up your cannon.", 50, height-50);
+        text("UP: move up, DOWN: move down, LEFT: decrease force, RIGHT: increase force.", 50, height-30);
+    }
+
+    // Estableix un número aleatori de targets
     void setTargets(int n1, int n2){
 
         // Crea un número aleatori (entre n1 i n2) d'objectius
         int nt = (int) random(n1, n2);
         targets = new Target[nt];
+
+        // Incrementa el número de targets
+        numTargets += nt;
 
         // Posiciona els objectius en el terreny de joc
         for(int i=0; i<nt; i++){
@@ -90,6 +144,9 @@ public class TirParabolic extends PApplet {
 
         // Dispara el canó
         if (key == 's' || key=='S') {
+            if(!disparat){
+                numShots++;
+            }
             disparat = true;
         }
         // Reseteja la posició dels objectius
