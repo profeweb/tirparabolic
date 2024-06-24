@@ -3,8 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8a16953a-730e-4506-b3ba-b5455e8dff29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step04/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step04/Projectil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step04/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step04/TirParabolic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step05/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step05/Projectil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step05/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step05/TirParabolic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step06/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step06/Projectil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step06/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step06/TirParabolic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step07/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step07/Projectil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step07/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step07/TirParabolic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step08/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step08/Projectil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/step08/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/step08/TirParabolic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stepFinal/Projectil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stepFinal/Projectil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stepFinal/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stepFinal/Target.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stepFinal/TirParabolic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stepFinal/TirParabolic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tonim/Documents/CODE/TirParabolic/src/stepFinal",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/Documents/CODE/TirParabolic/src/stepFinal&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\Documents\CODE\TirParabolic\src\stepFinal" />
@@ -57,7 +66,7 @@
       <recent name="step01" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.stepFinal.TirParabolic">
+  <component name="RunManager" selected="Application.step06.TirParabolic">
     <configuration name="TirParabolic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="step07.TirParabolic" />
       <module name="TirParabolic" />
@@ -71,12 +80,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="step02.TirParabolic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="step02.TirParabolic" />
+    <configuration name="step03.TirParabolic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="step03.TirParabolic" />
       <module name="TirParabolic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="step02.*" />
+          <option name="PATTERN" value="step03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="step03.TirParabolic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="step03.TirParabolic" />
+    <configuration name="step06.TirParabolic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="step06.TirParabolic" />
       <module name="TirParabolic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="step03.*" />
+          <option name="PATTERN" value="step06.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.step06.TirParabolic" />
         <item itemvalue="Application.stepFinal.TirParabolic" />
         <item itemvalue="Application.step08.TirParabolic" />
         <item itemvalue="Application.TirParabolic" />
         <item itemvalue="Application.step03.TirParabolic" />
-        <item itemvalue="Application.step02.TirParabolic" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +151,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718956447015</updated>
       <workItem from="1718956448987" duration="7251000" />
-      <workItem from="1718978821665" duration="9702000" />
+      <workItem from="1718978821665" duration="9723000" />
+      <workItem from="1719211824814" duration="1011000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1718958332333</created>
@@ -193,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718989228149</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial">
+      <created>1718989348977</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718989348977</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

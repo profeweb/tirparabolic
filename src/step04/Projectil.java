@@ -40,7 +40,7 @@ public class Projectil {
     }
 
     // Setter de les propietats
-    void setProperties(float a, float mx, float my, float f, float h){
+    void setProperties(float a, float f, float h){
 
         // Posició y inicial (canó i projectil)
         this.y = h;

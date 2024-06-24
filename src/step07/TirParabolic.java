@@ -60,7 +60,7 @@ public class TirParabolic extends PApplet {
         // Si no s'ha disparat, configura posició H, força F i direcció A del canó
         if (!disparat) {
             float a = map(mouseY, this.h-100, this.h+100, 0, -PI);
-            p.setProperties(a, mouseX, mouseY, f, h);
+            p.setProperties(a, f, h);
         }
         // Si s'ha disparat i el projectil està dins del camp de joc (pantalla)
         else if (disparat && p.x <= width && p.y <= height) {

@@ -43,7 +43,7 @@ public class TirParabolic extends PApplet {
 
         // Actualitza el canó
         float a = map(mouseY, this.h-100, this.h+100, 0, -PI);
-        p.setProperties(a, mouseX, mouseY, f, h);
+        p.setProperties(a, f, h);
 
         // Dibuixa els targets
         t1.display(this);
